@@ -4,11 +4,5 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/TrexLevel01.unity
-    guid: a41259282628f654290fdbfabd62ac06
-  - enabled: 1
-    path: Assets/Scenes/GameOver.unity
-    guid: 596b98096b148eb428446da606b56753
+  m_Scenes: []
   m_configObjects: {}

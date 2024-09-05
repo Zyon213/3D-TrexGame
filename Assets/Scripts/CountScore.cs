@@ -50,7 +50,7 @@ public class CountScore : MonoBehaviour
     void UpdateHighScoreText()
     {
         highScoreText.text = PlayerPrefs.GetInt("HighScore").ToString("D5");
-        highScoreText.text = $"Hi {highScoreText.text}";
+        highScoreText.text = $"HI {highScoreText.text}";
 
     }
 }

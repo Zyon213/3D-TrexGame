@@ -10,8 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2392880117328859761}
   - component: {fileID: 2400969335857316261}
-  - component: {fileID: 8156183814128429859}
-  - component: {fileID: 5036256319376130586}
+  - component: {fileID: 1089013804648266191}
   m_Layer: 0
   m_Name: ThreeCactus
   m_TagString: Untagged
@@ -46,9 +45,9 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.1371126, y: 0.5146854, z: 0.582212}
-  m_Center: {x: 0.5685563, y: 2.0558233, z: 0.11701417}
---- !u!114 &8156183814128429859
+  m_Size: {x: 2.1371126, y: 0.6137761, z: 0.582212}
+  m_Center: {x: 0.5685563, y: 2.006278, z: 0.11701417}
+--- !u!114 &1089013804648266191
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -57,28 +56,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 7471393117629794003}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3d36330bb150094b9236b17ba5dca1f, type: 3}
+  m_Script: {fileID: 11500000, guid: f0b6f28de55e7744b97645a8aa8a4332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!95 &5036256319376130586
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7471393117629794003}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &558804859732685115
 PrefabInstance:
   m_ObjectHideFlags: 0

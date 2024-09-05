@@ -1,5 +1,7 @@
 ﻿using UnityEngine.SceneManagement;
 using UnityEngine;
+using UnityEngine.UI;
+using System.Collections;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -14,14 +16,15 @@ public class PlayerMovement : MonoBehaviour
     private bool isDown;
     private CapsuleCollider cap;
 
+
     public float speedIncreasedPerPoint = 0.1f;
-    //public Rigidbody rg;
-    // Start is called before the first frame update
+
     void Start()
     {
         rg = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
         cap = GetComponent<CapsuleCollider>();
+        cap.center = new Vector3(cap.center.x, 0.78f, cap.center.z);
     }
     private void FixedUpdate()
     {
@@ -37,9 +40,10 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && grounded)
         {
             Jump();
+            cap.radius = 0.9f;
         }
 
-        if (Input.GetKeyDown(KeyCode.DownArrow) && grounded)
+         if (Input.GetKeyDown(KeyCode.DownArrow) && grounded)
         {
             cap.radius = 0.7f;
             isDown = true;
@@ -53,24 +57,31 @@ public class PlayerMovement : MonoBehaviour
 
 
         animator.SetBool("IsGround", grounded);
+       
 
     }
 
   private  void Jump()
     {
-
         float height = GetComponent<Collider>().bounds.size.y;
         bool isGround = Physics.Raycast(transform.position, Vector3.down, (height / 2) * 0.1f, groundMask);
-
         rg.AddForce(Vector3.up * jumpForce);
-       grounded = false;
+         grounded = false;
+        cap.radius = 0.7f;
 
     }
 
+    public IEnumerator MoveDownCap()
+    {
+        yield return new WaitForSeconds(1f);
+        cap.center = new Vector3(cap.center.x, 0.78f, cap.center.z) ;
+ 
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Ground")
             grounded = true;
     }
+
 }
